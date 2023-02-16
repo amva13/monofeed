@@ -1,7 +1,7 @@
 from cryptofeed import FeedHandler
 from cryptofeed.defines import TICKER
 from cryptofeed.exchanges import Coinbase
-from writers import AsyncTickerConsoleWriter as writer
+from writers import MQTickerWriter as writer
 
 class MonoFeed:
     EXCHANGES = {
@@ -13,11 +13,13 @@ class MonoFeed:
     }
     
     WRITERS = {
-        TICKER: writer.write,
+        TICKER: None,
     }
     
     def __init__(self):
         self.feedHandler = FeedHandler()
+        self.writer = writer()
+        self.WRITERS[TICKER] = self.writer.getWriter()
         
     def addCryptoFeed(self, exchange, args_dict):
         self.feedHandler.add_feed(self.EXCHANGES[exchange](**args_dict))
