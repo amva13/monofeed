@@ -37,3 +37,33 @@ class Tick:
             "timestamp": self.timestampConvert(self.timestamp),
             "time_received": self.timestampConvert(self.time_received)
         }
+
+        
+class Query(dict):
+    
+    def __init__(self, params=None):
+        raise NotImplementedError(f"{self.__class__.__name__} has not implemented __init__()")
+    
+
+class RangeQuery(Query):
+    
+    def __init__(self, params=None):
+        params = {} if params is None else params
+        self.format = "%m/%d/%y" if "format" not in params else params["format"]
+        assert isinstance(self.format, str)
+    
+    def addFrom(self, dt):
+        assert isinstance(dt, str)
+        self["from"]=datetime.strptime(dt, self.format)
+        
+    def addTo(self, dt):
+        assert isinstance(dt, str)
+        self["to"]=datetime.strptime(dt,self.format)
+
+    def addExchange(self, ex):
+        assert isinstance(ex, str)
+        self["exchange"]=ex
+        
+    def addSymbol(self, symbol):
+        assert isinstance(symbol, str)
+        self["symbol"]=symbol

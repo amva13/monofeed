@@ -43,5 +43,5 @@ class csvDB(AbstractDB):
     def read(self, query=None):
         if query is None:
             # default to outputting a pandas dataframe from the path
-            return pd.read_csv(self.path)
+            return pd.read_csv(self.path, names = self.fields)
         raise ValueError(f"{self.__class__.__name__} does not support queries at this time.")
