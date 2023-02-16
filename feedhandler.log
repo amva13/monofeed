@@ -1,0 +1,110 @@
+2023-02-15 13:01:02,742 : ERROR : COINBASE.ws.1: encountered an exception, reconnecting in 1.0 seconds
+Traceback (most recent call last):
+  File "/Users/alejandrovelez-arce/code/monofeed/.venv/lib/python3.9/site-packages/cryptofeed/connection_handler.py", line 69, in _create_connection
+    await self._handler(connection, self.handler)
+  File "/Users/alejandrovelez-arce/code/monofeed/.venv/lib/python3.9/site-packages/cryptofeed/connection_handler.py", line 119, in _handler
+    await handler(message, connection, self.conn.last_message)
+  File "/Users/alejandrovelez-arce/code/monofeed/.venv/lib/python3.9/site-packages/cryptofeed/exchanges/coinbase.py", line 353, in message_handler
+    await self._ticker(msg, timestamp)
+  File "/Users/alejandrovelez-arce/code/monofeed/.venv/lib/python3.9/site-packages/cryptofeed/exchanges/coinbase.py", line 110, in _ticker
+    await self.callback(TICKER, Ticker(self.id, self.exchange_symbol_to_std_symbol(msg['product_id']), Decimal(msg['best_bid']), Decimal(msg['best_ask']), ts, raw=msg), timestamp)
+  File "/Users/alejandrovelez-arce/code/monofeed/.venv/lib/python3.9/site-packages/cryptofeed/feed.py", line 258, in callback
+    await cb(obj, receipt_timestamp)
+  File "/Users/alejandrovelez-arce/code/monofeed/writers.py", line 37, in write
+    if "t" not in args_dict or "receipt_timestamp" not in args_dict:
+TypeError: argument of type 'float' is not iterable
+2023-02-15 13:01:04,196 : ERROR : COINBASE.ws.1: encountered an exception, reconnecting in 1.0 seconds
+Traceback (most recent call last):
+  File "/Users/alejandrovelez-arce/code/monofeed/.venv/lib/python3.9/site-packages/cryptofeed/connection_handler.py", line 69, in _create_connection
+    await self._handler(connection, self.handler)
+  File "/Users/alejandrovelez-arce/code/monofeed/.venv/lib/python3.9/site-packages/cryptofeed/connection_handler.py", line 119, in _handler
+    await handler(message, connection, self.conn.last_message)
+  File "/Users/alejandrovelez-arce/code/monofeed/.venv/lib/python3.9/site-packages/cryptofeed/exchanges/coinbase.py", line 353, in message_handler
+    await self._ticker(msg, timestamp)
+  File "/Users/alejandrovelez-arce/code/monofeed/.venv/lib/python3.9/site-packages/cryptofeed/exchanges/coinbase.py", line 110, in _ticker
+    await self.callback(TICKER, Ticker(self.id, self.exchange_symbol_to_std_symbol(msg['product_id']), Decimal(msg['best_bid']), Decimal(msg['best_ask']), ts, raw=msg), timestamp)
+  File "/Users/alejandrovelez-arce/code/monofeed/.venv/lib/python3.9/site-packages/cryptofeed/feed.py", line 258, in callback
+    await cb(obj, receipt_timestamp)
+  File "/Users/alejandrovelez-arce/code/monofeed/writers.py", line 37, in write
+    if "t" not in args_dict or "receipt_timestamp" not in args_dict:
+TypeError: argument of type 'float' is not iterable
+2023-02-15 13:01:05,716 : ERROR : COINBASE.ws.1: encountered an exception, reconnecting in 1.0 seconds
+Traceback (most recent call last):
+  File "/Users/alejandrovelez-arce/code/monofeed/.venv/lib/python3.9/site-packages/cryptofeed/connection_handler.py", line 69, in _create_connection
+    await self._handler(connection, self.handler)
+  File "/Users/alejandrovelez-arce/code/monofeed/.venv/lib/python3.9/site-packages/cryptofeed/connection_handler.py", line 119, in _handler
+    await handler(message, connection, self.conn.last_message)
+  File "/Users/alejandrovelez-arce/code/monofeed/.venv/lib/python3.9/site-packages/cryptofeed/exchanges/coinbase.py", line 353, in message_handler
+    await self._ticker(msg, timestamp)
+  File "/Users/alejandrovelez-arce/code/monofeed/.venv/lib/python3.9/site-packages/cryptofeed/exchanges/coinbase.py", line 110, in _ticker
+    await self.callback(TICKER, Ticker(self.id, self.exchange_symbol_to_std_symbol(msg['product_id']), Decimal(msg['best_bid']), Decimal(msg['best_ask']), ts, raw=msg), timestamp)
+  File "/Users/alejandrovelez-arce/code/monofeed/.venv/lib/python3.9/site-packages/cryptofeed/feed.py", line 258, in callback
+    await cb(obj, receipt_timestamp)
+  File "/Users/alejandrovelez-arce/code/monofeed/writers.py", line 37, in write
+    if "t" not in args_dict or "receipt_timestamp" not in args_dict:
+TypeError: argument of type 'float' is not iterable
+2023-02-15 13:03:18,790 : ERROR : COINBASE.ws.1: encountered an exception, reconnecting in 1.0 seconds
+Traceback (most recent call last):
+  File "/Users/alejandrovelez-arce/code/monofeed/.venv/lib/python3.9/site-packages/cryptofeed/connection_handler.py", line 69, in _create_connection
+    await self._handler(connection, self.handler)
+  File "/Users/alejandrovelez-arce/code/monofeed/.venv/lib/python3.9/site-packages/cryptofeed/connection_handler.py", line 119, in _handler
+    await handler(message, connection, self.conn.last_message)
+  File "/Users/alejandrovelez-arce/code/monofeed/.venv/lib/python3.9/site-packages/cryptofeed/exchanges/coinbase.py", line 353, in message_handler
+    await self._ticker(msg, timestamp)
+  File "/Users/alejandrovelez-arce/code/monofeed/.venv/lib/python3.9/site-packages/cryptofeed/exchanges/coinbase.py", line 110, in _ticker
+    await self.callback(TICKER, Ticker(self.id, self.exchange_symbol_to_std_symbol(msg['product_id']), Decimal(msg['best_bid']), Decimal(msg['best_ask']), ts, raw=msg), timestamp)
+  File "/Users/alejandrovelez-arce/code/monofeed/.venv/lib/python3.9/site-packages/cryptofeed/feed.py", line 258, in callback
+    await cb(obj, receipt_timestamp)
+TypeError: write() missing 1 required positional argument: 'receipt_timestamp'
+2023-02-15 13:03:20,295 : ERROR : COINBASE.ws.1: encountered an exception, reconnecting in 1.0 seconds
+Traceback (most recent call last):
+  File "/Users/alejandrovelez-arce/code/monofeed/.venv/lib/python3.9/site-packages/cryptofeed/connection_handler.py", line 69, in _create_connection
+    await self._handler(connection, self.handler)
+  File "/Users/alejandrovelez-arce/code/monofeed/.venv/lib/python3.9/site-packages/cryptofeed/connection_handler.py", line 119, in _handler
+    await handler(message, connection, self.conn.last_message)
+  File "/Users/alejandrovelez-arce/code/monofeed/.venv/lib/python3.9/site-packages/cryptofeed/exchanges/coinbase.py", line 353, in message_handler
+    await self._ticker(msg, timestamp)
+  File "/Users/alejandrovelez-arce/code/monofeed/.venv/lib/python3.9/site-packages/cryptofeed/exchanges/coinbase.py", line 110, in _ticker
+    await self.callback(TICKER, Ticker(self.id, self.exchange_symbol_to_std_symbol(msg['product_id']), Decimal(msg['best_bid']), Decimal(msg['best_ask']), ts, raw=msg), timestamp)
+  File "/Users/alejandrovelez-arce/code/monofeed/.venv/lib/python3.9/site-packages/cryptofeed/feed.py", line 258, in callback
+    await cb(obj, receipt_timestamp)
+TypeError: write() missing 1 required positional argument: 'receipt_timestamp'
+2023-02-15 13:03:21,772 : ERROR : COINBASE.ws.1: encountered an exception, reconnecting in 1.0 seconds
+Traceback (most recent call last):
+  File "/Users/alejandrovelez-arce/code/monofeed/.venv/lib/python3.9/site-packages/cryptofeed/connection_handler.py", line 69, in _create_connection
+    await self._handler(connection, self.handler)
+  File "/Users/alejandrovelez-arce/code/monofeed/.venv/lib/python3.9/site-packages/cryptofeed/connection_handler.py", line 119, in _handler
+    await handler(message, connection, self.conn.last_message)
+  File "/Users/alejandrovelez-arce/code/monofeed/.venv/lib/python3.9/site-packages/cryptofeed/exchanges/coinbase.py", line 353, in message_handler
+    await self._ticker(msg, timestamp)
+  File "/Users/alejandrovelez-arce/code/monofeed/.venv/lib/python3.9/site-packages/cryptofeed/exchanges/coinbase.py", line 110, in _ticker
+    await self.callback(TICKER, Ticker(self.id, self.exchange_symbol_to_std_symbol(msg['product_id']), Decimal(msg['best_bid']), Decimal(msg['best_ask']), ts, raw=msg), timestamp)
+  File "/Users/alejandrovelez-arce/code/monofeed/.venv/lib/python3.9/site-packages/cryptofeed/feed.py", line 258, in callback
+    await cb(obj, receipt_timestamp)
+TypeError: write() missing 1 required positional argument: 'receipt_timestamp'
+2023-02-15 13:07:30,053 : ERROR : COINBASE.ws.1: encountered an exception, reconnecting in 1.0 seconds
+Traceback (most recent call last):
+  File "/Users/alejandrovelez-arce/code/monofeed/.venv/lib/python3.9/site-packages/cryptofeed/connection_handler.py", line 69, in _create_connection
+    await self._handler(connection, self.handler)
+  File "/Users/alejandrovelez-arce/code/monofeed/.venv/lib/python3.9/site-packages/cryptofeed/connection_handler.py", line 119, in _handler
+    await handler(message, connection, self.conn.last_message)
+  File "/Users/alejandrovelez-arce/code/monofeed/.venv/lib/python3.9/site-packages/cryptofeed/exchanges/coinbase.py", line 353, in message_handler
+    await self._ticker(msg, timestamp)
+  File "/Users/alejandrovelez-arce/code/monofeed/.venv/lib/python3.9/site-packages/cryptofeed/exchanges/coinbase.py", line 110, in _ticker
+    await self.callback(TICKER, Ticker(self.id, self.exchange_symbol_to_std_symbol(msg['product_id']), Decimal(msg['best_bid']), Decimal(msg['best_ask']), ts, raw=msg), timestamp)
+  File "/Users/alejandrovelez-arce/code/monofeed/.venv/lib/python3.9/site-packages/cryptofeed/feed.py", line 258, in callback
+    await cb(obj, receipt_timestamp)
+TypeError: object NoneType can't be used in 'await' expression
+2023-02-15 13:07:31,559 : ERROR : COINBASE.ws.1: encountered an exception, reconnecting in 1.0 seconds
+Traceback (most recent call last):
+  File "/Users/alejandrovelez-arce/code/monofeed/.venv/lib/python3.9/site-packages/cryptofeed/connection_handler.py", line 69, in _create_connection
+    await self._handler(connection, self.handler)
+  File "/Users/alejandrovelez-arce/code/monofeed/.venv/lib/python3.9/site-packages/cryptofeed/connection_handler.py", line 119, in _handler
+    await handler(message, connection, self.conn.last_message)
+  File "/Users/alejandrovelez-arce/code/monofeed/.venv/lib/python3.9/site-packages/cryptofeed/exchanges/coinbase.py", line 353, in message_handler
+    await self._ticker(msg, timestamp)
+  File "/Users/alejandrovelez-arce/code/monofeed/.venv/lib/python3.9/site-packages/cryptofeed/exchanges/coinbase.py", line 110, in _ticker
+    await self.callback(TICKER, Ticker(self.id, self.exchange_symbol_to_std_symbol(msg['product_id']), Decimal(msg['best_bid']), Decimal(msg['best_ask']), ts, raw=msg), timestamp)
+  File "/Users/alejandrovelez-arce/code/monofeed/.venv/lib/python3.9/site-packages/cryptofeed/feed.py", line 258, in callback
+    await cb(obj, receipt_timestamp)
+TypeError: object NoneType can't be used in 'await' expression
